@@ -11,7 +11,7 @@ def line(customers)
 end
 
 def take_a_number(customers, new_customer)
-  any_deli << new_customer
+  customers << new_customer
   puts "Welcome, #{new_customer}. You are number #{customers.size} in line."
 end
 
