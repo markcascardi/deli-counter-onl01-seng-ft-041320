@@ -3,10 +3,10 @@ def line(customers)
   customers.each_with_index do |customer, index|
     current_line << " #{index + 1}. #{customer}"
   end
-  if customers.empty?
-    puts "The line is currently empty."
-  else
+  if customers.any?
     puts current_line
+  else
+    puts "The line is currently empty."
   end
 end
 
@@ -16,9 +16,9 @@ def take_a_number(customers, new_customer)
 end
 
 def now_serving(customers)
-  if customers.empty?
-    puts "There is nobody waiting to be served!"
-  else
+  if customers.any?
     puts "Currently serving #{customers.shift}."
+  else
+    puts "There is nobody waiting to be served!"
   end
 end
